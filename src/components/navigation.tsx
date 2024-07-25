@@ -18,6 +18,8 @@ const Navigation = () => {
     const handleToggle = () => {
       setToggled(!subMenuOpen);
     };
+
+
    
   return (
     <>
@@ -57,7 +59,7 @@ const Navigation = () => {
 
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
-            href="/"
+            href="/home"
             className={
               pathname == "/home"
                 ? "text-sm font-bold leading-6 text-[#BD0C0C]"
@@ -74,7 +76,7 @@ const Navigation = () => {
             </button>
             <div className={ subMenuOpen ? "absolute w-[45rem] top-full left-0 mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg":"hidden"}>
             <div className="grid grid-cols-3 grid-rows-3 gap-2">
-            <div className=" flex items-center space-x-4  p-4">
+            <a  href= "/services/study_permit" className=" flex items-center space-x-4  p-4">
           <Files color="#BD0C0C"  className="ml-2" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -85,7 +87,7 @@ const Navigation = () => {
             </p>
           </div>
           
-        </div>
+        </a>
         <div className=" flex items-center space-x-4  p-4">
           <Users color="#BD0C0C" className="ml-2 text-red" />
           
@@ -221,7 +223,7 @@ const Navigation = () => {
                   }>
             Services <ChevronRight className= {subMenuOpen ? "hidden":"block"}/> <ChevronUp className= {subMenuOpen ? "block":"hidden"}/>
             </button>
-            <div className={ subMenuOpen ? "relative w-[30rem] top-full left-0 mt-1 bg-white":"hidden"}>
+            <div className={ subMenuOpen ? "relative w-[20rem] top-full left-0 mt-1 bg-white":"hidden"}>
             <div className="grid grid-cols-1 grid-rows-7 gap-2">
             <div className=" flex items-center space-x-4  p-4">
           <Files color="#BD0C0C"  className="ml-2" />
@@ -248,7 +250,7 @@ const Navigation = () => {
           </div>
           
         </div>
-        <div className=" flex items-center space-x-4  p-4">
+        <a href= "/services/study_permit" className=" flex items-center space-x-4  p-4">
           <GraduationCap color="#BD0C0C" className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -259,7 +261,7 @@ const Navigation = () => {
             </p>
           </div>
           
-        </div>
+        </a>
         <div className=" flex items-center space-x-4  p-4">
           <Cannabis color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">

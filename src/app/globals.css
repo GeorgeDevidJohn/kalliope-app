@@ -74,3 +74,12 @@
       @apply bg-background text-foreground;
     }
   }
+  .hover-transition {
+    transition-duration: 0.3s; /* Adjust the duration as needed */
+    transition-timing-function: ease-in-out; /* Easing function for smooth transition */
+  }
+  
+  .hover-transition:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
