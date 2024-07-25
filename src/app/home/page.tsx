@@ -14,7 +14,14 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { CardContent, CardHeader } from "@/components/ui/card";
 export default function HomePage() {
-    const [data, setData] = useState(null);
+  type DrawData = {
+    drawName: string;
+    drawCRS: number;
+    drawSize: number;
+    drawDateTime: string;
+    drawCutOff: string;
+  };
+    const [data, setData] = useState<DrawData[] | null>(null);
     
     useEffect(() => {
         const fetchData = async () => {
@@ -63,10 +70,10 @@ className="relative flex flex-wrap flex-row lg:justify-start justify-center bg-c
 <div
 className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-700 bg-transparent md:border-r rounded-none shadow-none bg-clip-border border-white/10">
 <p className="block font-sans text-sm antialiased font-normal leading-normal text-white uppercase">
-{data[0].drawName}
+{data[0]?.drawName}
 </p>
 <h1 className="flex justify-center gap-1 mt-4 font-sans antialiased font-normal tracking-normal text-[#BD0C0C] text-7xl">
-  {data[0].drawCRS}
+  {data[0]?.drawCRS}
   <span className="self-end text-4xl"></span>
 </h1>
 <span className="mt-4 text-gray-400 text-2xl">CRS score</span>
@@ -79,7 +86,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
       </svg></span>
     <p className="block font-sans text-base flex antialiased font-normal leading-relaxed text-inherit">
-    Number of invitations issued : <span className="font-bold ml-2"> {data[0].drawSize}</span>
+    Number of invitations issued : <span className="font-bold ml-2"> {data[0]?.drawSize}</span>
     </p>
   </li>
   <li className="flex items-center gap-4">
@@ -88,7 +95,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
       </svg></span>
     <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-    Date and time of round : <span className="font-bold ml-2"> {data[0].drawDateTime}</span>
+    Date and time of round : <span className="font-bold ml-2"> {data[0]?.drawDateTime}</span>
     </p>
   </li>
   <li className="flex items-center gap-4">
@@ -97,7 +104,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
       </svg></span>
     <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-    Tie-breaking rule :<span className="font-bold ml-2"> {data[0].drawCutOff}</span>
+    Tie-breaking rule :<span className="font-bold ml-2"> {data[0]?.drawCutOff}</span>
     </p>
   </li>
  
