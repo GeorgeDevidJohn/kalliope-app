@@ -102,6 +102,7 @@ const Navigation = () => {
           
         </div>
         <div className=" flex items-center space-x-4  p-4">
+        <a  href= "/services/study_permit" className=" flex items-center space-x-4  p-4">
           <GraduationCap color="#BD0C0C" className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -111,9 +112,10 @@ const Navigation = () => {
               Send notifications to device.
             </p>
           </div>
-          
+          </a>
         </div>
         <div className=" flex items-center space-x-4  p-4">
+        <a  href= "/services/cadian_citizenship" className=" flex items-center space-x-4  p-4">
           <Cannabis color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -123,7 +125,7 @@ const Navigation = () => {
               Send notifications to device.
             </p>
           </div>
-          
+          </a>
         </div>
         <div className=" flex items-center space-x-4  p-4">
           <BriefcaseBusiness color="#BD0C0C"  className="ml-6 text-red" />
@@ -150,6 +152,7 @@ const Navigation = () => {
           
         </div>
         <div className=" flex items-center space-x-4  p-4">
+        <a  href= "/services/temporary_residence" className=" flex items-center space-x-4  p-4">
           <Earth color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -159,7 +162,7 @@ const Navigation = () => {
               Send notifications to device.
             </p>
           </div>
-          
+          </a>
         </div>
  
 </div>
@@ -263,6 +266,7 @@ const Navigation = () => {
           
         </a>
         <div className=" flex items-center space-x-4  p-4">
+        <a  href= "/services/cadian_citizenship" className=" flex items-center space-x-4 ">
           <Cannabis color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -272,7 +276,7 @@ const Navigation = () => {
               Send notifications to device.
             </p>
           </div>
-          
+          </a>
         </div>
         <div className=" flex items-center space-x-4  p-4">
           <BriefcaseBusiness color="#BD0C0C"  className="ml-2 text-red" />
@@ -299,6 +303,7 @@ const Navigation = () => {
           
         </div>
         <div className=" flex items-center space-x-4  p-4">
+        <a  href= "/services/temporary_residence" className=" flex items-center space-x-4  ">
           <Earth color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -308,7 +313,7 @@ const Navigation = () => {
               Send notifications to device.
             </p>
           </div>
-          
+          </a>
         </div>
  
 </div>
