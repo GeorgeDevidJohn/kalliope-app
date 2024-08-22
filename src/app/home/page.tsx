@@ -77,7 +77,9 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
 </h1>
 <span className="mt-4 text-gray-400 text-2xl">CRS score</span>
 </div>
-<div className="p-0 flex items-center w-[55%] mt-8 lg:mt-0 md:mt-0">
+<div className="p-0 flex items-center  sm:w-[55%] md:w-[55%] lg:w-[55%] mt-8 lg:mt-0 md:mt-0">
+
+
 <ul className="flex flex-col w-full gap-4">
   <li className="flex items-center gap-4">
     <span className="p-1 border rounded-full border-white/20 bg-white/20"><svg xmlns="http://www.w3.org/2000/svg"
