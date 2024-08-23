@@ -23,8 +23,8 @@ const Navigation = () => {
    
   return (
     <>
-      <nav
-        className="flex items-center  justify-between p-.5 lg:px-8 bg-white h-20 z-50 w-full fixed"
+      <nav 
+        className="flex items-center z-400 shadow-lg justify-between p-.5 lg:px-8 bg-white h-20 z-50 w-full fixed"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -59,9 +59,9 @@ const Navigation = () => {
 
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
-            href="/home"
+            href="/"
             className={
-              pathname == "/home"
+              pathname == "/"
                 ? "text-sm font-bold leading-6 text-[#BD0C0C]"
                 : "text-sm font-semibold leading-6 text-gray-500"
             }
@@ -171,9 +171,9 @@ const Navigation = () => {
           {/* End of Services menu with submenus */}
 
           <Link
-            href="/about"
+            href="/aboutus"
             className={
-              pathname == "/about"
+              pathname == "/aboutus"
                 ? "text-sm font-bold leading-6 text-[#BD0C0C]"
                 : "text-sm font-semibold  leading-6 text-gray-500"
             }
@@ -181,9 +181,9 @@ const Navigation = () => {
             About us
           </Link>
           <Link
-            href="/contact"
+            href="/contactus"
             className={
-              pathname == "/contact"
+              pathname == "/contactus"
                 ? "text-sm font-bold leading-6 text-[#BD0C0C]"
                 : "text-sm font-semibold leading-6 text-gray-500"
             }
@@ -209,9 +209,9 @@ const Navigation = () => {
             <div className=" divide-y divide-gray-500/10">
               <div className="space-y-2 pb-6">
                 <Link
-                  href="/home"
+                  href="/"
                   className={
-                    pathname == "/home"
+                    pathname == "/"
                       ? "-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-[#BD0C0C]"
                       : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 hover:bg-gray-500"
                   }
@@ -320,9 +320,9 @@ const Navigation = () => {
             </div>
           </div>
                 <Link
-                  href="/about"
+                  href="/aboutus"
                   className={
-                    pathname == "/about"
+                    pathname == "/aboutus"
                       ? "-mx-3 block rounded-lg px-3 py-2  text-base font-bold leading-7 text-[#BD0C0C] "
                       : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 hover:bg-gray-500"
                   }
@@ -330,9 +330,9 @@ const Navigation = () => {
                   About us
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/contactus"
                   className={
-                    pathname == "/contact"
+                    pathname == "/contactus"
                       ? "-mx-3 block rounded-lg px-3 py-2 dark:text-gray-400 dark:hover:bg-gray-200 text-base font-bold leading-7 text-gray-900 hover:bg-gray-200"
                       : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 hover:bg-gray-500"
                   }

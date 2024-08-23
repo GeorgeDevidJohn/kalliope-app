@@ -4,6 +4,8 @@ import logo from "../../../public/home/logo red.png";
 import Image from "next/image";
 import Homebanner from "../../../public/home/kalliop_data.png"; 
 import banner from "../../../public/home/better.png";
+import Homebannerimage from "../../../public/home/whitebg.jpg";
+import map from "../../../public/home/map-background_4.png";
 import rcic from "../../../public/home/RCIC-IRB_EN_HORZ_CLR_POS.png";
 import logocip from "../../../public/home/capic2-logo.png";
 import { Button } from "@/components/ui/button";
@@ -39,33 +41,51 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="bg-white  dark:bg-gray-900">
-    <div className="grid max-w-screen-xl - px-4 py-[10rem] mx-auto lg:gap-8 xl:gap-0 lg:py-[10rem] lg:grid-cols-12">
-        <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
-           <div className="flex">
-            <Button>
-                Book an appointment
-            </Button>
-            </div>
-        </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <Image alt="mockup" src={Homebanner}/>
-        </div>                
-    </div>
-</section>
+  <div style={{
+          backgroundImage: `url(${Homebannerimage.src})`,
+        
+        }} className=" bg-cover">
+  <div   className="flex items-center justify-center h-screen w-screen">
+  <div className=" flex flex-row justify-center items-center">
+  <div className="lg:max-w-xl p-4 lg:pr-5 relative z-40">
+                    <p className="flex text-sm uppercase text-g1  ">
+                         
+                      
+                    </p>
+                    <h2 className="mb-6 mt-[3.5rem] max-w-lg text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
+                        We make you look
+                        <span className="my-1 inline-block border-b-8 border-red-600 border-g4 bg-white px-4 font-bold text-g4 animate__animated animate__flash">different</span>
+                    </h2>
+                    <p className="text-base text-gray-700">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque it.Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque it.</p>
+                    <div className="mt-10 flex flex-col items-center md:flex-row">
+                        <a href="/" className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
+                            Book an Appointment</a>
+                        <a href="/contactus" aria-label="" className="group inline-flex items-center font-semibold text-g1">Contact Us
+                            <svg xmlns="http://www.w3.org/2000/svg" className="ml-4 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="abg-orange-400 hidden lg:block w-[30%] overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
+                     <Image src={Homebanner}/>
+                </div>
+   
+  </div>
+</div>
 
 
 
 
-
-<div  className="flex justify-center mb-60 mt-[-10rem]">
-<div className="flex flex-wrap items-center justify-center py-5 md:w-3/4 md:pb-20 md:pt-10 md:pl-10">
+<div  className="flex justify-center  pb-20 mt-[-6rem]">
+<div className="flex flex-wrap items-center z-200 justify-center py-5 md:w-3/4 md:pb-20 md:pt-10 md:pl-10">
 
 {data && (
 <div
-className="relative flex flex-wrap flex-row lg:justify-start justify-center bg-clip-border rounded-xl bg-gradient-to-tr from-gray-900 to-gray-800 text-white max-w-[80%] shadow-gray-900/20 shadow-md w-full  p-8">
+className="relative flex flex-wrap flex-row z-200 lg:justify-start justify-center shadow-[10px_10px_20px_rgba(0,0,0,0.25),-10px_-10px_20px_rgba(255,255,255,0.25)] bg-clip-border rounded-xl bg-gradient-to-tr from-gray-900 to-gray-800 text-white max-w-[80%]  w-full  p-8">
 <div
 className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-700 bg-transparent md:border-r rounded-none shadow-none bg-clip-border border-white/10">
 <p className="block font-sans text-sm antialiased font-normal leading-normal text-white uppercase">
@@ -118,7 +138,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
 </div>
 </div>
 
-
+</div>
 
 
    
@@ -308,6 +328,11 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
       </div>
      
    </div>
+</section>
+<section>
+  <div  className="flex justify-center mt-[-8rem] bg-[#F4F4F4]">
+<img src="https://goto.etherscan.com/images/about/world-link.svg" />
+  </div>
 </section>
 
 
