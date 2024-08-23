@@ -21,7 +21,7 @@ export default function AboutUs(){
                 </div>
 
                 <div className="abg-orange-400 hidden lg:block w-[30%] overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
-                     <Image src={Homebanner}/>
+                     <Image src={Homebanner} alt={""}/>
                 </div>
    
   </div>
