@@ -9,7 +9,7 @@ import map from "../../../public/home/map-background_4.png";
 import rcic from "../../../public/home/RCIC-IRB_EN_HORZ_CLR_POS.png";
 import logocip from "../../../public/home/capic2-logo.png";
 import { Button } from "@/components/ui/button";
-import { BriefcaseBusiness, CalendarDays, Cannabis, Earth, Files, GraduationCap, Home, Users } from "lucide-react";
+import { BriefcaseBusiness, CalendarDays, Cannabis, Earth, Files, GraduationCap, Home, Milestone, Users } from "lucide-react";
 import Footer from "@/components/footer";
 import { Card } from "@radix-ui/themes";
 import axios from 'axios';
@@ -41,6 +41,7 @@ export default function HomePage() {
 
   return (
     <>
+   
   <div style={{
           backgroundImage: `url(${Homebannerimage.src})`,
         
@@ -238,32 +239,20 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
             </div>
          </div>
          <div className="flex flex-wrap justify-center  gap-4">
-            <div className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
-          <Files color="#BD0C0C"  className="ml-2" />
+            <a href="/services/immigration" className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
+          <Milestone color="#BD0C0C"  className="ml-2" />
           <div className="flex-1 space-y-1">
             <p className="text-lg font-medium leading-none">
-              PNP
+              Immigration Pathway
             </p>
             <p className="text-sm text-base text-muted-foreground">
               Send notifications to device.Send notifications to device. Send notifications to device.
             </p>
           </div>
           
-        </div>
-        <div className=" flex w-[20rem] h-[10rem] rounded-2xl hover:bg-white hover:shadow-lg hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
-          <Users color="#BD0C0C" className="ml-2 text-red" />
-          
-          <div className="flex-1 space-y-1">
-            <p className="text-lg font-medium leading-none ">
-            Family Sponsorship
-            </p>
-            <p className="text-sm text-base text-muted-foreground">
-              Send notific ations to device.ations to device.
-            </p>
-          </div>
-          
-        </div>
-        <div className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
+        </a>
+      
+        <a  href="/services/study_permit"className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
           <GraduationCap color="#BD0C0C" className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-lg font-medium leading-none ">
@@ -274,8 +263,8 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
             </p>
           </div>
           
-        </div>
-        <div className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
+        </a>
+        <a href="/services/cadian_citizenship" className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
           <Cannabis color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-lg font-medium leading-none ">
@@ -286,8 +275,8 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
             </p>
           </div>
           
-        </div>
-        <div className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
+        </a>
+        <a href="/services/work_permit" className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
           <BriefcaseBusiness color="#BD0C0C"  className="ml-6 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-lg font-medium leading-none ">
@@ -298,20 +287,9 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
             </p>
           </div>
           
-        </div>
-        <div className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
-          <Home color="#BD0C0C"  className="ml-2 text-red" />
-          <div className="flex-1 space-y-1">
-            <p className="text-lg font-medium leading-none ">
-              Permanent Residency
-            </p>
-            <p className="text-sm text-base text-muted-foreground">
-              Send notifications to device. e. ations to device.ations to device.
-            </p>
-          </div>
-          
-        </div>
-        <div className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
+        </a>
+       
+        <a href="/services/temporary_residence" className=" flex w-[20rem] h-[10rem] rounded-2xl hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition space-x-4  p-4">
           <Earth color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-lg font-medium leading-none ">
@@ -322,7 +300,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
             </p>
           </div>
           
-        </div>
+        </a>
  
 </div>
       </div>

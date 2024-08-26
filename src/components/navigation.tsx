@@ -1,13 +1,14 @@
 "use client"
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
+import { useState, useEffect, useRef  } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import name from "../../public/home/logo_name.png";
-import { ArrowBigLeft, BriefcaseBusiness, Cannabis, CarFrontIcon, ChevronDown, ChevronRight, ChevronUp, Earth, Files, GraduationCap, Home, Menu, Users } from "lucide-react";
+import { ArrowBigLeft, BriefcaseBusiness, Cannabis, CarFrontIcon, ChevronDown, ChevronRight, ChevronUp, Earth, Files, GraduationCap, Home, Menu, Milestone, Users } from "lucide-react";
 import { PinBottomIcon } from "@radix-ui/react-icons";
+import { Menubar, MenubarContent, MenubarMenu, MenubarTrigger } from "./ui/menubar";
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -40,7 +41,7 @@ const Navigation = () => {
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon
-                className="h-6 w-6 mr-4"
+                className="h-6 w-6 mr-[-6rem]"
                 aria-hidden="true"
               />
             </button>
@@ -51,12 +52,13 @@ const Navigation = () => {
           >
             <span className="sr-only">Open main menu</span>
             <Menu
-              className="h-6 w-6 mr-4"
+              className="h-6 w-6 mr-[-6rem]"
               aria-hidden="true"
             />
           </button>
         </div>
-
+        <Menubar>
+        <MenubarMenu>
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
             href="/"
@@ -66,21 +68,27 @@ const Navigation = () => {
                 : "text-sm font-semibold leading-6 text-gray-500"
             }
           >
-            Home
+            Home          
           </Link>
 
           {/* Services menu with submenus */}
-          <div className=" relative">
-            <button  onClick={() => handleToggle()} className="text-sm flex gap-2 font-semibold dark:text-white leading-6 text-gray-500 focus:outline-none">
-            Services <ChevronDown className= {subMenuOpen ? "hidden":"block"}/> <ChevronUp className= {subMenuOpen ? "block":"hidden"}/>
-            </button>
-            <div className={ subMenuOpen ? "absolute w-[45rem] top-full left-0 mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg":"hidden"}>
-            <div className="grid grid-cols-3 grid-rows-3 gap-2">
-            <a  href= "/services/study_permit" className=" flex items-center space-x-4  p-4">
-          <Files color="#BD0C0C"  className="ml-2" />
-          <div className="flex-1 space-y-1">
+         
+          <div className=" mt-[-4px] relative">
+          <MenubarTrigger>
+            <div className="text-sm flex gap-2 font-semibold dark:text-white leading-6 text-gray-500 focus:outline-none">
+            Services <ChevronDown /> 
+            </div>
+            </MenubarTrigger>
+          
+            <MenubarContent>
+              
+            <div className={  "absolute w-[45rem] top-full left-0 mt-[-1rem]  bg-white rounded-lg shadow-2xl"}>
+            <div className="grid grid-cols-3 grid-rows-2 gap-2">
+            <a  href= "/services/immigration" className=" hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition rounded-2xl space-x-4 flex items-center space-x-4  m-4">
+          <Milestone color="#BD0C0C"  className="ml-2" />
+          <div className="flex-1 space-y-1 ">
             <p className="text-sm font-medium leading-none">
-              PNP
+             Immigration Pathway
             </p>
             <p className="text-sm text-muted-foreground">
               Send notifications to device.
@@ -88,21 +96,9 @@ const Navigation = () => {
           </div>
           
         </a>
-        <div className=" flex items-center space-x-4  p-4">
-          <Users color="#BD0C0C" className="ml-2 text-red" />
-          
-          <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-            Family Sponsorship
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Send notifications to device.
-            </p>
-          </div>
-          
-        </div>
-        <div className=" flex items-center space-x-4  p-4">
-        <a  href= "/services/study_permit" className=" flex items-center space-x-4  p-4">
+        
+        <div className=" flex items-center space-x-4  ">
+        <a  href= "/services/study_permit" className=" hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition rounded-2xl space-x-4 flex items-center space-x-4  m-4">
           <GraduationCap color="#BD0C0C" className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -114,8 +110,8 @@ const Navigation = () => {
           </div>
           </a>
         </div>
-        <div className=" flex items-center space-x-4  p-4">
-        <a  href= "/services/cadian_citizenship" className=" flex items-center space-x-4  p-4">
+        <div className=" flex items-center space-x-4 ">
+        <a  href= "/services/cadian_citizenship" className=" hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition rounded-2xl space-x-4 flex items-center space-x-4  m-4">
           <Cannabis color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -127,7 +123,8 @@ const Navigation = () => {
           </div>
           </a>
         </div>
-        <div className=" flex items-center space-x-4  p-4">
+        <div className=" flex items-center space-x-4 ">
+        <a  href= "/services/work_permit" className=" hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition rounded-2xl space-x-4 flex items-center space-x-4  m-4">
           <BriefcaseBusiness color="#BD0C0C"  className="ml-6 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -137,22 +134,11 @@ const Navigation = () => {
               Send notifications to device.
             </p>
           </div>
-          
+          </a>
         </div>
-        <div className=" flex items-center space-x-4  p-4">
-          <Home color="#BD0C0C"  className="ml-2 text-red" />
-          <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-              Permanent Residency
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Send notifications to device.
-            </p>
-          </div>
-          
-        </div>
-        <div className=" flex items-center space-x-4  p-4">
-        <a  href= "/services/temporary_residence" className=" flex items-center space-x-4  p-4">
+      
+        <div className=" flex items-center space-x-4 ">
+        <a  href= "/services/temporary_residence" className=" hover:shadow-lg hover:bg-white hover:shadow-blue-gray-500/20 items-center hover-transition rounded-2xl space-x-4 flex items-center space-x-4  m-4">
           <Earth color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -167,7 +153,11 @@ const Navigation = () => {
  
 </div>
             </div>
+            </MenubarContent>
+           
           </div>
+
+        
           {/* End of Services menu with submenus */}
 
           <Link
@@ -191,6 +181,8 @@ const Navigation = () => {
             Contact us
           </Link>
         </div>
+        </MenubarMenu>
+        </Menubar>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
       </nav>
 
@@ -208,16 +200,16 @@ const Navigation = () => {
           <div className=" flow-root">
             <div className=" divide-y divide-gray-500/10">
               <div className="space-y-2 pb-6">
-                <Link
+                <a
                   href="/"
                   className={
                     pathname == "/"
                       ? "-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-[#BD0C0C]"
-                      : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 hover:bg-gray-500"
+                      : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500"
                   }
                 >
                   Home
-                </Link>
+                </a>
                 <div className=" relative">
             <button  onClick={() => handleToggle()}  className={ 
                     pathname == "/serviec"
@@ -227,32 +219,21 @@ const Navigation = () => {
             Services <ChevronRight className= {subMenuOpen ? "hidden":"block"}/> <ChevronUp className= {subMenuOpen ? "block":"hidden"}/>
             </button>
             <div className={ subMenuOpen ? "relative w-[20rem] top-full left-0 mt-1 bg-white":"hidden"}>
-            <div className="grid grid-cols-1 grid-rows-7 gap-2">
+            <div className="grid grid-cols-1 grid-rows-5 gap-2">
             <div className=" flex items-center space-x-4  p-4">
-          <Files color="#BD0C0C"  className="ml-2" />
+            <a href= "/services/immigration" className=" flex items-center space-x-4 ">
+          <Milestone color="#BD0C0C"  className="ml-2" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
-              PNP
+              Immigration Pathway
             </p>
             <p className="text-sm text-muted-foreground">
               Send notifications to device.
             </p>
           </div>
-          
+          </a>
         </div>
-        <div className=" flex items-center space-x-4  p-4">
-          <Users color="#BD0C0C" className="ml-2 text-red" />
-          
-          <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-            Family Sponsorship
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Send notifications to device.
-            </p>
-          </div>
-          
-        </div>
+       
         <a href= "/services/study_permit" className=" flex items-center space-x-4  p-4">
           <GraduationCap color="#BD0C0C" className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
@@ -278,7 +259,9 @@ const Navigation = () => {
           </div>
           </a>
         </div>
+       
         <div className=" flex items-center space-x-4  p-4">
+        <a  href= "/services/work_permit" className=" flex items-center space-x-4 ">
           <BriefcaseBusiness color="#BD0C0C"  className="ml-2 text-red" />
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium leading-none">
@@ -288,20 +271,10 @@ const Navigation = () => {
               Send notifications to device.
             </p>
           </div>
+          </a>
           
         </div>
-        <div className=" flex items-center space-x-4  p-4">
-          <Home color="#BD0C0C"  className="ml-2 text-red" />
-          <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-              Permanent Residency
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Send notifications to device.
-            </p>
-          </div>
-          
-        </div>
+       
         <div className=" flex items-center space-x-4  p-4">
         <a  href= "/services/temporary_residence" className=" flex items-center space-x-4  ">
           <Earth color="#BD0C0C"  className="ml-2 text-red" />
@@ -319,26 +292,26 @@ const Navigation = () => {
 </div>
             </div>
           </div>
-                <Link
+                <a
                   href="/aboutus"
                   className={
                     pathname == "/aboutus"
                       ? "-mx-3 block rounded-lg px-3 py-2  text-base font-bold leading-7 text-[#BD0C0C] "
-                      : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 hover:bg-gray-500"
+                      : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 "
                   }
                 >
                   About us
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contactus"
                   className={
                     pathname == "/contactus"
-                      ? "-mx-3 block rounded-lg px-3 py-2 dark:text-gray-400 dark:hover:bg-gray-200 text-base font-bold leading-7 text-gray-900 hover:bg-gray-200"
-                      : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 hover:bg-gray-500"
+                      ? "-mx-3 block rounded-lg px-3 py-2 dark:text-gray-400  text-base font-bold leading-7 text-[#BD0C0C] "
+                      : "-mx-3 block dark:text-gray-white rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-500 "
                   }
                 >
                   Contact us
-                </Link>
+                </a>
               </div>
               <div className="py-6"></div>
             </div>
