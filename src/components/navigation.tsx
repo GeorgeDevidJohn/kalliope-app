@@ -36,23 +36,23 @@ const Navigation = () => {
         <div className="flex lg:hidden">
         <button
               type="button"
-              className={mobileMenuOpen? "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700":"hidden"}
+              className={mobileMenuOpen? "mr-[-10rem] inline-flex items-center justify-center rounded-md p-2.5 text-gray-700":"hidden"}
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon
-                className="h-6 w-6 mr-[-6rem]"
+                className="h-6 w-6 "
                 aria-hidden="true"
               />
             </button>
           <button
             type="button"
-            className={!mobileMenuOpen? "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700":"hidden"}
+            className={!mobileMenuOpen? " mr-[-10rem] inline-flex items-center justify-center rounded-md p-2.5 text-gray-700":"hidden"}
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
             <Menu
-              className="h-6 w-6 mr-[-6rem]"
+              className="h-6 w-6 "
               aria-hidden="true"
             />
           </button>
