@@ -15,7 +15,12 @@ import { Card } from "@radix-ui/themes";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { CardContent, CardHeader } from "@/components/ui/card";
+export const  truncateText = (text: string, length = 80) => {
+  if (text.length <= length) return text;
+  return text.slice(0, length) + '...';
+};
 export default function HomePage() {
+
   type DrawData = {
     drawName: string;
     drawCRS: number;
@@ -23,6 +28,7 @@ export default function HomePage() {
     drawDateTime: string;
     drawCutOff: string;
   };
+
     const [data, setData] = useState<DrawData[] | null>(null);
     
     useEffect(() => {
@@ -37,7 +43,7 @@ export default function HomePage() {
         };
         fetchData();
       }, []);
-
+    
 
   return (
     <>
@@ -63,7 +69,7 @@ export default function HomePage() {
                     <div className="mt-10 flex flex-col items-center md:flex-row">
                         <a href="/" className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
                             Book an Appointment</a>
-                        <a href="/contactus" aria-label="" className="group inline-flex items-center font-semibold text-g1">Contact Us
+                        <a href="/contactus" aria-label="" className="group  w-full inline-flex items-center font-semibold text-g1">Contact Us
                             <svg xmlns="http://www.w3.org/2000/svg" className="ml-4 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
@@ -152,8 +158,8 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
           
         }} className="bg-cover">
       <div  
-        className="relative flex  pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]  flex-col  items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8">
-    <div className="w-full px-4 lg:w-6/12 ">
+        className="relative flex  pt-20 pb-24 lg:pt-[120px] lg:pb-[210px]  flex-col  items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8">
+    <div className="w-full  px-4 lg:w-6/12 ">
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
@@ -183,7 +189,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 px-8 md:ml-8 lg:w-1/2 xl:w-5/12">
+            <div className="md:w-1/2 pb-28 px-4 md:ml-8 lg:w-1/2 xl:w-6/12">
               <div className="mt-10 lg:mt-0">
                 <span className="block mb-4 text-[#BD0C0C]  text-lg font-semibold ">
                   Why Choose Us 
@@ -191,31 +197,81 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
                 <h2 className="mb-5 text-3xl font-bold text-white dark:text-white sm:text-[40px]/[48px]">
                   Make your customers happy by giving services.
                 </h2>
-                <p className="mb-5 text-base text-[#F4F4F4] dark:text-dark-6">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.
+                <p className="mb-5 text-base text-[#878787] dark:text-dark-6">
+                At <strong>Kalliope Immigration Inc</strong>,we simplify the Canadian immigration process with personalized, top-notch services. Here is why you can trust us with your journey:
                 </p>
-                <h6 className="mb-6  border-b flex items-center text-xs font-normal text-white dark:text-dark-6">
-                   Certification
-                 
-                  </h6>
-                <div className="flex gap-6 mb-8 justify-center lg:justify-start ">
-               
-               <Image className="rounded" src={logocip} alt="" width={120} height={120}/>
-               <Image src={rcic} alt="" width={160} height={120}/>
-             </div>
-               
-                <a
-                  href="/aboutus"
-                  className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border border-transparent rounded-md px-7 bg-[#BD0C0C] hover:bg-opacity-90"
-                >
-                  Know more
-                </a>
+                <ul className="list-none mt-4">
+  <li className="list-none mt-4">
+ <div className="flex items-center flex-row gap-2.5 mb-2">
+  <span className="relative flex h-3 w-3">
+  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+  </span>
+  <h3 className="font-black text-lg text-[#F4F4F4]">RCIC-IRB Expertise</h3>
+  </div>
+  <p className="text-base  text-[#878787] ml-4" >Led by a <strong>Regulated Canadian Immigration Consultant (RCIC-IRB) </strong>, we provide expert guidance on Canadian immigration law.</p>
+
+  </li>
+
+  <li className="list-none mt-4">
+ <div className="flex items-center flex-row gap-2.5 mb-2">
+  <span className="relative flex h-3 w-3">
+  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+  </span>
+  <h3 className="font-black text-lg text-[#F4F4F4]">Personalized Service</h3>
+  </div>
+  <p className="text-base  ml-4 text-[#878787]" >At Kalliope Immigration Inc., we tailor solutions to fit your unique immigration needs.</p>
+
+  </li>
+  <li className="list-none mt-4">
+ <div className="flex items-center flex-row gap-2.5 mb-2">
+  <span className="relative flex h-3 w-3">
+  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+  </span>
+  <h3 className="font-black text-lg text-[#F4F4F4]">Comprehensive Immigration Support</h3>
+  </div>
+  <p className="text-base  text-[#878787] ml-4" >From permanent residence to temporary visas and work permits, we handle complex cases at every stage.</p>
+
+  </li>
+  <li className="list-none mt-4">
+ <div className="flex items-center flex-row gap-2.5 mb-2">
+  <span className="relative flex h-3 w-3">
+  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+  </span>
+  <h3 className="font-black text-lg text-[#F4F4F4]">Client-Centered Approach</h3>
+  </div>
+  <p className="text-base  ml-4 text-[#878787]" >We prioritize your success with transparent communication and personalized service.</p>
+
+  </li>
+  <li className="list-none mt-4">
+ <div className="flex items-center flex-row gap-2.5 mb-2">
+  <span className="relative flex h-3 w-3">
+  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+  </span>
+  <h3 className="font-black text-lg text-[#F4F4F4]">Integrity &amp; Transparency</h3>
+  </div>
+  <p className="text-base  ml-4 text-[#878787]" >Honest, clear guidance every step of the way—ensuring you understand the process, timelines, and fees.</p>
+
+  </li>
+
+
+</ul>
+                
+           
+              
               </div>
+              
             </div>
+          
 </div>
+
 </div>
+
+
 {/* -----------services----------- */}
 
 
@@ -233,8 +289,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
                   What We Offer
                </h2>
                <p className="text-body-color text-base dark:text-dark-6">
-                  There are many variations of passages of Lorem Ipsum available
-                  but the majority have suffered alteration in some form.
+               Explore our services below to learn how we can assist you on your journey to Canada.
                </p>
             </div>
          </div>
@@ -246,7 +301,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
               Immigration Pathway
             </p>
             <p className="text-sm text-base text-muted-foreground">
-              Send notifications to device.Send notifications to device. Send notifications to device.
+            {truncateText( "There are several immigration pathways to migrate to Canada by attaining Permanent Residency. From Federal Express Entry pathways to Provincial Nominee Programmes the options are many.")} 
             </p>
           </div>
           
@@ -259,7 +314,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
               Study Permits
             </p>
             <p className="text-sm text-base text-muted-foreground">
-              Send notifications to device.ations to device.ations to device.
+             {truncateText("To study in Canada for any program longer than 6 months, study permits are mandatory . The application process varies depending on your country of residence.")}
             </p>
           </div>
           
@@ -271,7 +326,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
               Canadian Citizenship 
             </p>
             <p className="text-sm text-base text-muted-foreground">
-              Send notifications to device. ations to device.ations to device.
+           {truncateText(" We offer support to apply for your Canadian Citizenship.")}
             </p>
           </div>
           
@@ -283,7 +338,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
               Work Permits
             </p>
             <p className=" text-base text-muted-foreground">
-              Send notifications to device. ations to device.ations to device.
+            {truncateText("There are several kinds of work permits to work in Canada, from Post graduate work permit to Spousal open work permits, from LMIA based work permits to Bridge Open Work Permits.")}
             </p>
           </div>
           
@@ -296,7 +351,7 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
               Temporary Resident Visas
             </p>
             <p className="text-sm text-base text-muted-foreground">
-              Send notifications to device. e. ations to device.ations to device.
+             {truncateText("Temporary resident Visas are required to enter Canada depending on your nationality whether to work or study in Canada . Additionally you might need Visitor Visa, Super Visa etc to visit Canada.")}
             </p>
           </div>
           
