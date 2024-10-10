@@ -23,14 +23,14 @@ export default function Immigration(){
   </h1>
 </div>
 
-          <h4 className="text-lg font-normal text-left tracking-tight text-slate-500">
+          <h2 className="text-lg font-normal text-left tracking-tight text-slate-500">
           
               <ul className="space-y-4">
  
    
-    <h4 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
+    <h2 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
     Express Entry
-</h4> 
+</h2> 
     <p> Express Entry is an online system that manages Canada’s immigration
 application intake and provides a pathway to permanent residency. Eligible
 candidates can create an Express Entry profile, valid for 12 months, and may
@@ -60,7 +60,7 @@ Letter of Invitation from a province. The system includes the following programs
 
  
 </ul>
-          </h4>
+          </h2>
         </div>
         <div>
          
@@ -75,7 +75,7 @@ Letter of Invitation from a province. The system includes the following programs
         <div className="md:px-40 px-2 gap-6">
        
 
-          <h4 className="text-lg font-normal text-left tracking-tight text-slate-500">
+          <h2 className="text-lg font-normal text-left tracking-tight text-slate-500">
           
               <ul className="space-y-4">
  
@@ -84,9 +84,9 @@ Letter of Invitation from a province. The system includes the following programs
 
 
   
-<h4 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
+<h2 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
 Provincial Nominee Program (PNP)
-</h4> 
+</h2> 
     <p> Provincial Nominee Programs allow Canadian provinces and territories to
 nominate candidates for permanent residency who wish to settle in a specific
 province. These programs are tailored to meet the economic and social goals of
@@ -95,36 +95,29 @@ experience.</p>
 
 <br></br><br></br> 
 
-    <h4 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
+    <h2 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
     Atlantic Immigration Program
-</h4> 
+</h2> 
 
     <p> The Atlantic Immigration Program is an employer-driven initiative designed to
 attract skilled workers to the Atlantic Canada region. Applicants must have a job
 offer from a designated employer and a settlement plan.</p>
 <br></br><br></br>
 
-<h4 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
+<h2 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
 Rural and Northern Immigration Pilot
-</h4> 
+</h2> 
 
     <p> This community-driven program allows participating communities to attract and
 retain skilled workers by matching them with local job vacancies. Successful
 candidates who obtain permanent residency can move to and work in these
 communities.</p>
-<br></br><br></br>
-<h4 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
-Rural and Northern Immigration Pilot
-</h4> 
 
-    <p> This community-driven program allows participating communities to attract and
-retain skilled workers by matching them with local job vacancies. Successful
-candidates who obtain permanent residency can move to and work in these
-communities.</p>
+
 <br></br><br></br>
-<h4 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
+<h2 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
 Home Child Care Provider/Home Support Worker Pilot Program
-</h4> 
+</h2> 
 
     <p>These pilot programs enable qualified caregivers and their families to come to
     Canada with the goal of becoming permanent residents.</p>
@@ -132,9 +125,9 @@ Home Child Care Provider/Home Support Worker Pilot Program
 </ul>
 <br></br>
 <br></br>
-<h4 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
+<h2 className="text-s md:text-l pl-2 my-2 border-l-4  font-sans font-bold border-red-600  dark:text-gray-200">
 Family Class Sponsorship
-</h4> 
+</h2> 
     <p> The Family Class Sponsorship program allows Canadian citizens and permanent
 residents to sponsor close family members for permanent residency. This
 program is designed to reunite families in Canada.</p>
@@ -156,7 +149,7 @@ program is designed to reunite families in Canada.</p>
     and grandparents under the Parents and Grandparents Sponsorship Program.</p>
   </li>
 </ul>
-          </h4>
+          </h2>
         </div>
         <div>
          

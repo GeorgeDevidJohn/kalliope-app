@@ -23,7 +23,7 @@ export default function Canadian_citizen(){
         <div className="flex max-w-lg flex-col gap-6">
         <div className="ten text-[34px] font-medium uppercase">
   <h1 className="text-justify  before:block before:bg-[#c50000] before:rounded before:h-[0.25rem] before:w-[42px]">
-  Canadian Citizenship (TRV)
+  Canadian Citizenship
   </h1>
 </div>
 

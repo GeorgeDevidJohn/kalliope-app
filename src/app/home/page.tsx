@@ -3,6 +3,7 @@ import Navigation from "@/components/navigation";
 import logo from "../../../public/home/logo red.png";
 import Image from "next/image";
 import Homebanner from "../../../public/home/kalliop_data.png"; 
+import building from "../../../public/home/building.jpeg"; 
 import banner from "../../../public/home/better.png";
 import Homebannerimage from "../../../public/home/whitebg.jpg";
 import map from "../../../public/home/map-background_4.png";
@@ -60,14 +61,12 @@ export default function HomePage() {
                       
                     </p>
                     <h2 className="mb-6 mt-[3.5rem] max-w-lg text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
-                        We make you look
-                        <span className="my-1 inline-block border-b-8 border-red-600 border-g4 bg-white px-4 font-bold text-g4 animate__animated animate__flash">different</span>
+                       Creating Your Canadian
+                        <span className="my-1 inline-block border-b-8 border-red-600 border-g4 bg-white px-4 font-bold text-g4 animate__animated animate__flash">Tales</span>
                     </h2>
-                    <p className="text-base text-gray-700">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque it.Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque it.</p>
+                    <p className="text-base text-gray-700">Craft your Canadian journey with expert immigration guidance and personalized care at Kalliope Immigration Inc., where your dreams become our mission.</p>
                     <div className="mt-10 flex flex-col items-center md:flex-row">
-                        <a href="/" className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
+                        <a href="https://calendly.com/merilo-thekalliope/30min" className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-red-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-gray-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
                             Book an Appointment</a>
                         <a href="/contactus" aria-label="" className="group  w-full inline-flex items-center font-semibold text-g1">Contact Us
                             <svg xmlns="http://www.w3.org/2000/svg" className="ml-4 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -180,11 +179,10 @@ className="relative  m-0 md:mr-4 md:pr-4 overflow-hidden text-center text-gray-7
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative z-10 my-4">
                     <img
-                      src="https://i.ibb.co/9y7nYCD/image-3.jpg"
+                      src="https://i.ibb.co/wgZTQ3S/building.jpg"
                       alt=""
                       className="w-full rounded-2xl"
                     />
-                 
                   </div>
                 </div>
               </div>
