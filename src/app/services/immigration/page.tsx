@@ -75,7 +75,7 @@ Letter of Invitation from a province. The system includes the following programs
         <div className="md:px-40 px-2 gap-6">
        
 
-          <h2 className="text-lg font-normal text-left tracking-tight text-slate-500">
+          <div className="text-lg font-normal text-left tracking-tight text-slate-500">
           
               <ul className="space-y-4">
  
@@ -149,7 +149,7 @@ program is designed to reunite families in Canada.</p>
     and grandparents under the Parents and Grandparents Sponsorship Program.</p>
   </li>
 </ul>
-          </h2>
+          </div>
         </div>
         <div>
          
